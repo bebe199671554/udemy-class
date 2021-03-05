@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  apiRootUrl: 'https://www.udemy.com/api-2.0/courses/',
 };
 
 /*

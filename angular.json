@@ -1,1 +1,293 @@
-{"version":1,"cli":{"defaultCollection":"@nrwl/angular"},"defaultProject":"udemy-class","schematics":{"@nrwl/workspace":{"library":{"linter":"tslint"}},"@nrwl/cypress":{"cypress-project":{"linter":"tslint"}},"@nrwl/node":{"application":{"linter":"tslint"},"library":{"linter":"tslint"}},"@nrwl/nest":{"application":{"linter":"tslint"},"library":{"linter":"tslint"}},"@nrwl/express":{"application":{"linter":"tslint"},"library":{"linter":"tslint"}},"@nrwl/angular:application":{"style":"css","linter":"tslint","unitTestRunner":"jest","e2eTestRunner":"cypress"},"@nrwl/angular:library":{"style":"css","linter":"tslint","unitTestRunner":"jest"},"@nrwl/angular:component":{"style":"css"}},"projects":{"udemy-class":{"projectType":"application","root":"apps/udemy-class","sourceRoot":"apps/udemy-class/src","prefix":"udemy-class","architect":{"build":{"builder":"@angular-devkit/build-angular:browser","options":{"outputPath":"dist/apps/udemy-class","index":"apps/udemy-class/src/index.html","main":"apps/udemy-class/src/main.ts","polyfills":"apps/udemy-class/src/polyfills.ts","tsConfig":"apps/udemy-class/tsconfig.app.json","aot":true,"assets":["apps/udemy-class/src/favicon.ico","apps/udemy-class/src/assets"],"styles":["./node_modules/@angular/material/prebuilt-themes/indigo-pink.css","apps/udemy-class/src/styles.css"],"scripts":[]},"configurations":{"production":{"fileReplacements":[{"replace":"apps/udemy-class/src/environments/environment.ts","with":"apps/udemy-class/src/environments/environment.prod.ts"}],"optimization":true,"outputHashing":"all","sourceMap":false,"namedChunks":false,"extractLicenses":true,"vendorChunk":false,"buildOptimizer":true,"budgets":[{"type":"initial","maximumWarning":"2mb","maximumError":"5mb"},{"type":"anyComponentStyle","maximumWarning":"6kb","maximumError":"10kb"}]}}},"serve":{"builder":"@angular-devkit/build-angular:dev-server","options":{"browserTarget":"udemy-class:build"},"configurations":{"production":{"browserTarget":"udemy-class:build:production"}}},"extract-i18n":{"builder":"@angular-devkit/build-angular:extract-i18n","options":{"browserTarget":"udemy-class:build"}},"lint":{"builder":"@angular-devkit/build-angular:tslint","options":{"tsConfig":["apps/udemy-class/tsconfig.app.json","apps/udemy-class/tsconfig.spec.json","apps/udemy-class/tsconfig.editor.json"],"exclude":["**/node_modules/**","!apps/udemy-class/**/*"]}},"test":{"builder":"@nrwl/jest:jest","outputs":["coverage/apps/udemy-class"],"options":{"jestConfig":"apps/udemy-class/jest.config.js","passWithNoTests":true}}}},"udemy-class-e2e":{"root":"apps/udemy-class-e2e","sourceRoot":"apps/udemy-class-e2e/src","projectType":"application","architect":{"e2e":{"builder":"@nrwl/cypress:cypress","options":{"cypressConfig":"apps/udemy-class-e2e/cypress.json","tsConfig":"apps/udemy-class-e2e/tsconfig.e2e.json","devServerTarget":"udemy-class:serve"},"configurations":{"production":{"devServerTarget":"udemy-class:serve:production"}}},"lint":{"builder":"@angular-devkit/build-angular:tslint","options":{"tsConfig":["apps/udemy-class-e2e/tsconfig.e2e.json"],"exclude":["**/node_modules/**","!apps/udemy-class-e2e/**/*"]}}}},"ui":{"root":"libs/ui","sourceRoot":"libs/ui/src","projectType":"library","targets":{"lint":{"executor":"@angular-devkit/build-angular:tslint","options":{"tsConfig":["libs/ui/tsconfig.lib.json"],"exclude":["**/node_modules/**","!libs/ui/**/*"]}}}}}}
+{
+  "version": 1,
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "defaultProject": "udemy-class",
+  "schematics": {
+    "@nrwl/workspace": {
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/cypress": {
+      "cypress-project": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/node": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/nest": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/express": {
+      "application": {
+        "linter": "tslint"
+      },
+      "library": {
+        "linter": "tslint"
+      }
+    },
+    "@nrwl/angular:application": {
+      "style": "css",
+      "linter": "tslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "style": "css",
+      "linter": "tslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "css"
+    }
+  },
+  "projects": {
+    "udemy-class": {
+      "projectType": "application",
+      "root": "apps/udemy-class",
+      "sourceRoot": "apps/udemy-class/src",
+      "prefix": "udemy-class",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/udemy-class",
+            "index": "apps/udemy-class/src/index.html",
+            "main": "apps/udemy-class/src/main.ts",
+            "polyfills": "apps/udemy-class/src/polyfills.ts",
+            "tsConfig": "apps/udemy-class/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/udemy-class/src/favicon.ico",
+              "apps/udemy-class/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "apps/udemy-class/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/udemy-class/src/environments/environment.ts",
+                  "with": "apps/udemy-class/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "udemy-class:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "udemy-class:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "udemy-class:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/udemy-class/tsconfig.app.json",
+              "apps/udemy-class/tsconfig.spec.json",
+              "apps/udemy-class/tsconfig.editor.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/udemy-class/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/udemy-class"],
+          "options": {
+            "jestConfig": "apps/udemy-class/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "udemy-class-e2e": {
+      "root": "apps/udemy-class-e2e",
+      "sourceRoot": "apps/udemy-class-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/udemy-class-e2e/cypress.json",
+            "tsConfig": "apps/udemy-class-e2e/tsconfig.e2e.json",
+            "devServerTarget": "udemy-class:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "udemy-class:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/udemy-class-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/udemy-class-e2e/**/*"]
+          }
+        }
+      }
+    },
+    "ui": {
+      "root": "libs/ui",
+      "sourceRoot": "libs/ui/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["libs/ui/tsconfig.lib.json"],
+            "exclude": ["**/node_modules/**", "!libs/ui/**/*"]
+          }
+        }
+      }
+    },
+    "api": {
+      "root": "libs/api",
+      "sourceRoot": "libs/api/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/api/tsconfig.lib.json",
+              "libs/api/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/api/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/api"],
+          "options": {
+            "jestConfig": "libs/api/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "core": {
+      "root": "libs/core",
+      "sourceRoot": "libs/core/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/core/tsconfig.lib.json",
+              "libs/core/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/core/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/core"],
+          "options": {
+            "jestConfig": "libs/core/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "util": {
+      "root": "libs/util",
+      "sourceRoot": "libs/util/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/util/tsconfig.lib.json",
+              "libs/util/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/util/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/util"],
+          "options": {
+            "jestConfig": "libs/util/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "model": {
+      "root": "libs/model",
+      "sourceRoot": "libs/model/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/model/tsconfig.lib.json",
+              "libs/model/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/model/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/model"],
+          "options": {
+            "jestConfig": "libs/model/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
+  }
+}

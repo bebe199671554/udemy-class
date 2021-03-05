@@ -1,1 +1,27 @@
-{"implicitDependencies":{"angular.json":"*","package.json":{"dependencies":"*","devDependencies":"*"},"tsconfig.base.json":"*","tslint.json":"*",".eslintrc.json":"*","nx.json":"*"},"affected":{"defaultBase":"master"},"npmScope":"udemy-class","tasksRunnerOptions":{"default":{"runner":"@nrwl/workspace/tasks-runners/default","options":{"cacheableOperations":["build","lint","test","e2e"]}}},"projects":{"udemy-class":{"tags":[]},"udemy-class-e2e":{"tags":[],"implicitDependencies":["udemy-class"]},"ui":{"tags":[]}}}
+{
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*"
+  },
+  "affected": { "defaultBase": "master" },
+  "npmScope": "udemy-class",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
+    }
+  },
+  "projects": {
+    "udemy-class": { "tags": [] },
+    "udemy-class-e2e": { "tags": [], "implicitDependencies": ["udemy-class"] },
+    "ui": { "tags": [] },
+    "api": { "tags": [] },
+    "core": { "tags": [] },
+    "util": { "tags": [] },
+    "model": { "tags": [] }
+  }
+}
