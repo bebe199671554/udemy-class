@@ -10,6 +10,8 @@ import { ApiModule } from '../api.module';
 export class CoursesService {
 
   private readonly apiRootUrl = `${this.configService.systemConfig.apiRootUrl}/api/SoftwareComputer`;
+  private readonly apiUserToken = `${this.configService.systemConfig.apiUserToken}`;
+  private readonly apiUserId = `${this.configService.systemConfig.apiUserId}`;
 
   constructor(private http: HttpClient, private configService: ConfigService) {}
 // get /api-2.0/courses/?page=1&page_size=10

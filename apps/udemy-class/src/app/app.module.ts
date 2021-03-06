@@ -4,8 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedMaterialModule } from '@udemy-class/ui';
+import { AppRoutingModule } from './app-routing.module';
 import { LayoutModule } from './layout/layout.module';
-import { PageModule } from './page/page.module';
+import { PagesModule } from './pages/pages.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [AppComponent],
@@ -16,7 +17,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LayoutModule,
     FormsModule,
     ReactiveFormsModule,
-    PageModule,
+    PagesModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

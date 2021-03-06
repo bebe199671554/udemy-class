@@ -5,6 +5,8 @@
 export const environment = {
   production: false,
   apiRootUrl: 'https://www.udemy.com/api-2.0/courses/',
+  apiUserToken:'ax4FaL6FVmWuSff64oBIlBw7cRnkdnRfImARdhO8jD2D5DxHaBiw1gneNPGa5Vu3Sjr6nguzB0gpZh2tenlMjWv3oLfktxixxCA7Nu9H4oDour8yQqt5tIs2wdPqZ4Xr',
+  apiUserId:'WSIOq9a8BYB9q1MwIO8ee8ZSLmGxlg0mW4eyXRX2',
 };
 
 /*

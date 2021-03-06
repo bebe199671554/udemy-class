@@ -40,18 +40,18 @@
       }
     },
     "@nrwl/angular:application": {
-      "style": "css",
+      "style": "scss",
       "linter": "tslint",
       "unitTestRunner": "jest",
       "e2eTestRunner": "cypress"
     },
     "@nrwl/angular:library": {
-      "style": "css",
+      "style": "scss",
       "linter": "tslint",
       "unitTestRunner": "jest"
     },
     "@nrwl/angular:component": {
-      "style": "css"
+      "style": "scss"
     }
   },
   "projects": {

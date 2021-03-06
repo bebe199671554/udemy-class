@@ -4,11 +4,13 @@ import { tap } from 'rxjs/operators';
 
 export interface SystemConfigModel {
   apiRootUrl: string;
+  apiUserToken:string;
+  apiUserId:string;
 }
 
 @Injectable()
 export class ConfigService {
-  systemConfig: SystemConfigModel = { apiRootUrl: '' };
+  systemConfig: SystemConfigModel = { apiRootUrl: '' ,apiUserToken:'',apiUserId:''};
   allMenuNodes;
   constructor(private http: HttpClient) {}
 
