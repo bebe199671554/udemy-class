@@ -16,12 +16,11 @@ export interface CourseQueryCondition {
 
 }
 
-// JSON TO TS 生成的 記得RENAME
 export interface CourseModel {
   count: number;
   next: string;
   previous?: any;
-  results: Result[];
+  results: Course[];
   aggregations: Aggregation[];
   search_tracking_id: string;
 }
@@ -32,6 +31,7 @@ export interface Aggregation {
   title: string;
 }
 
+
 export interface Option {
   count: number;
   value: string;
@@ -39,16 +39,16 @@ export interface Option {
   title: string;
 }
 
-export interface Result {
+export interface Course {
   _class: string;
   id: number;
   title: string;
   url: string;
   is_paid: boolean;
   price: string;
-  price_detail: Pricedetail;
+  price_detail: PriceDetail;
   price_serve_tracking_id: string;
-  visible_instructors: Visibleinstructor[];
+  visible_instructors: VisibleInstructor[];
   image_125_H: string;
   image_240x135: string;
   is_practice_test_course: boolean;
@@ -66,7 +66,8 @@ export interface Result {
   instructor_name?: any;
 }
 
-export interface Visibleinstructor {
+// _class: "user"
+export interface VisibleInstructor {
   _class: string;
   title: string;
   name: string;
@@ -78,7 +79,7 @@ export interface Visibleinstructor {
   url: string;
 }
 
-export interface Pricedetail {
+export interface PriceDetail {
   amount: number;
   currency: string;
   price_string: string;
